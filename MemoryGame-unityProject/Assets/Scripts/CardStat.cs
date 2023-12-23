@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -17,6 +18,11 @@ public class CardStat : MonoBehaviour
     public int SetID
     {
         set => id = value;
+    }
+
+    private void Start()
+    {
+        _heightOpen = cover.sizeDelta.x;
     }
 
     public void CheckCouple()
@@ -54,7 +60,7 @@ public class CardStat : MonoBehaviour
 
         }
         
-        cover.sizeDelta = new Vector2(100,_heightClose) ;
+        cover.sizeDelta = new Vector2(cover.sizeDelta.x,_heightClose) ;
 
         
         
@@ -78,7 +84,7 @@ public class CardStat : MonoBehaviour
 
         }
         
-        cover.sizeDelta = new Vector2(100,_heightOpen) ;
+        cover.sizeDelta = new Vector2(cover.sizeDelta.x,_heightOpen) ;
 
         
         
