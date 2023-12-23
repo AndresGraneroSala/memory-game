@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -53,6 +54,7 @@ public class ManagerBoard : MonoBehaviour
         foreach (var card in cardsTransforms)
         {
             card.Find("Cover").gameObject.SetActive(false);
+            card.GetComponent<EventTrigger>().enabled=false;
         }
 
         StartCoroutine(TimerSeeCards());
@@ -81,6 +83,7 @@ public class ManagerBoard : MonoBehaviour
         foreach (var card in cardsTransforms)
         {
             card.Find("Cover").gameObject.SetActive(true);
+            card.GetComponent<EventTrigger>().enabled=true;
         }
 
         StartCoroutine(TimerMatch());
