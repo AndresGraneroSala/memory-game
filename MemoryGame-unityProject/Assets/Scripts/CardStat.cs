@@ -47,7 +47,7 @@ public class CardStat : MonoBehaviour
     IEnumerator TurnUp()
     {
         yield return CoroutineTurnUp();
-        ManagerBoard.SharedInstance.CompareId(id);
+        ManagerBoard.SharedInstance.CompareId(id,gameObject);
 
     }
 

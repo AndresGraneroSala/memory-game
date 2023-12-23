@@ -30,6 +30,8 @@ public class ManagerBoard : MonoBehaviour
     [SerializeField] private int points=0;
 
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
+
+    [SerializeField] private GameObject selected1, selected2;
     
     private void Awake()
     {
@@ -114,21 +116,23 @@ public class ManagerBoard : MonoBehaviour
     
 
 
-    public void CompareId(int id)
+    public void CompareId(int id, GameObject cardObject)
     {
         if (coupleSelected >= 0)
         {
+
+            selected2 = cardObject;
             //another selected
             if (coupleSelected == id)
             {
-                print("win");
+                //print("win");
                 points++;
                 pointsText.text = points.ToString();
                 CoupleWin(coupleSelected);
             }
             else
             {
-                print("loose");
+                //print("loose");
                 CoupleLoose(id);
 
             }
@@ -139,6 +143,7 @@ public class ManagerBoard : MonoBehaviour
         {
             //no selected
             coupleSelected = id;
+            selected1 = cardObject;
         }
     }
 
@@ -148,15 +153,15 @@ public class ManagerBoard : MonoBehaviour
         
         
         
-        StartCoroutine(couplesCards[id].card1.gameObject.GetComponent<CardStat>().TurnDown());
-        StartCoroutine(couplesCards[id].card2.gameObject.GetComponent<CardStat>().TurnDown());
-        StartCoroutine(couplesCards[coupleSelected].card1.gameObject.GetComponent<CardStat>().TurnDown());
-        StartCoroutine(couplesCards[coupleSelected].card2.gameObject.GetComponent<CardStat>().TurnDown());
-        
-        
+        StartCoroutine(selected1.GetComponent<CardStat>().TurnDown());
+        StartCoroutine(selected2.GetComponent<CardStat>().TurnDown());
+
+        selected1 = null;
+        selected2 = null;
+
         //couplesCards[coupleSelected].card1.gameObject.GetComponent<Image>().color= Color.white;
         //couplesCards[coupleSelected].card2.gameObject.GetComponent<Image>().color= Color.white;
-        
+
 
     }
     
