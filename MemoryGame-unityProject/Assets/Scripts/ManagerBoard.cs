@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -48,7 +47,6 @@ public class ManagerBoard : MonoBehaviour
         InitBoard();
         foreach (var card in cardsTransforms)
         {
-            card.GetComponent<EventTrigger>().enabled = false;
             card.Find("Cover").gameObject.SetActive(false);
         }
 
@@ -68,7 +66,6 @@ public class ManagerBoard : MonoBehaviour
         
         foreach (var card in cardsTransforms)
         {
-            card.GetComponent<EventTrigger>().enabled = true;
             card.Find("Cover").gameObject.SetActive(true);
         }
 
@@ -93,7 +90,6 @@ public class ManagerBoard : MonoBehaviour
     {
         foreach (var card in cardsTransforms)
         {
-            card.GetComponent<EventTrigger>().enabled = false;
             card.Find("Cover").gameObject.SetActive(false);
         }
     }
@@ -131,11 +127,7 @@ public class ManagerBoard : MonoBehaviour
 
     void CoupleLoose(int id)
     {
-        couplesCards[id].card1.gameObject.GetComponent<EventTrigger>().enabled = true;
-        couplesCards[id].card2.gameObject.GetComponent<EventTrigger>().enabled = true;        
-        
-        //couplesCards[coupleSelected].card1.gameObject.GetComponent<EventTrigger>().enabled = true;
-        //couplesCards[coupleSelected].card2.gameObject.GetComponent<EventTrigger>().enabled = true;
+
         
         
         
