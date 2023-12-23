@@ -60,13 +60,14 @@ public class CardStat : MonoBehaviour
         
         yield return null;
     }
-    
 
-    public void TurnDown()
+
+    public IEnumerator TurnDown()
     {
-        StartCoroutine(CoroutineTurnDown());
+        yield return CoroutineTurnDown();
+        eventTrigger.enabled = true;
     }
-    
+
     private IEnumerator CoroutineTurnDown()
     {
         

@@ -22,6 +22,14 @@ public class ManagerBoard : MonoBehaviour
 
     [SerializeField] private int coupleSelected=-1;
 
+    [SerializeField] private Text timerText,pointsText;
+    [SerializeField] private float timer;
+
+    [SerializeField] private float timeSeeCards = 5; 
+    [SerializeField] private float timeToFindCouples = 60;
+
+    [SerializeField] private int points=0;
+    
     public int CoupleSelected => coupleSelected;
 
     private void Awake()
@@ -36,8 +44,62 @@ public class ManagerBoard : MonoBehaviour
 
     void Start()
     {
+        timer = 5;
         InitBoard();
+        foreach (var card in cardsTransforms)
+        {
+            card.GetComponent<EventTrigger>().enabled = false;
+            card.Find("Cover").gameObject.SetActive(false);
+        }
+
+        StartCoroutine(TimerSeeCards());
     }
+
+    private IEnumerator TimerSeeCards()
+    {
+        timer = timeSeeCards;
+
+        while (timer>0)
+        {
+            yield return new WaitForSeconds(1);
+            timer--;
+            timerText.text = timer.ToString("0");
+        }
+        
+        foreach (var card in cardsTransforms)
+        {
+            card.GetComponent<EventTrigger>().enabled = true;
+            card.Find("Cover").gameObject.SetActive(true);
+        }
+
+        StartCoroutine(TimerMatch());
+    }
+
+    private IEnumerator TimerMatch()
+    {
+        timer =timeToFindCouples;
+        
+        while (timer>0)
+        {
+            yield return new WaitForSeconds(1);
+            timer--;
+            timerText.text = timer.ToString("0");
+        }
+        
+        Finish();
+    }
+
+    private void Finish()
+    {
+        foreach (var card in cardsTransforms)
+        {
+            card.GetComponent<EventTrigger>().enabled = false;
+            card.Find("Cover").gameObject.SetActive(false);
+        }
+    }
+
+    
+
 
     public void CompareId(int id)
     {
@@ -47,6 +109,8 @@ public class ManagerBoard : MonoBehaviour
             if (coupleSelected == id)
             {
                 print("win");
+                points++;
+                pointsText.text = points.ToString();
                 CoupleWin(coupleSelected);
             }
             else
@@ -70,15 +134,15 @@ public class ManagerBoard : MonoBehaviour
         couplesCards[id].card1.gameObject.GetComponent<EventTrigger>().enabled = true;
         couplesCards[id].card2.gameObject.GetComponent<EventTrigger>().enabled = true;        
         
-        couplesCards[coupleSelected].card1.gameObject.GetComponent<EventTrigger>().enabled = true;
-        couplesCards[coupleSelected].card2.gameObject.GetComponent<EventTrigger>().enabled = true;
+        //couplesCards[coupleSelected].card1.gameObject.GetComponent<EventTrigger>().enabled = true;
+        //couplesCards[coupleSelected].card2.gameObject.GetComponent<EventTrigger>().enabled = true;
         
         
         
-        couplesCards[id].card1.gameObject.GetComponent<CardStat>().TurnDown();
-        couplesCards[id].card2.gameObject.GetComponent<CardStat>().TurnDown();
-        couplesCards[coupleSelected].card1.gameObject.GetComponent<CardStat>().TurnDown();
-        couplesCards[coupleSelected].card2.gameObject.GetComponent<CardStat>().TurnDown();
+        StartCoroutine(couplesCards[id].card1.gameObject.GetComponent<CardStat>().TurnDown());
+        StartCoroutine(couplesCards[id].card2.gameObject.GetComponent<CardStat>().TurnDown());
+        StartCoroutine(couplesCards[coupleSelected].card1.gameObject.GetComponent<CardStat>().TurnDown());
+        StartCoroutine(couplesCards[coupleSelected].card2.gameObject.GetComponent<CardStat>().TurnDown());
         
         
         //couplesCards[coupleSelected].card1.gameObject.GetComponent<Image>().color= Color.white;
