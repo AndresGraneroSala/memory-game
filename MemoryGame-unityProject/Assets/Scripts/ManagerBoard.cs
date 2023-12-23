@@ -29,7 +29,6 @@ public class ManagerBoard : MonoBehaviour
 
     [SerializeField] private int points=0;
     
-    public int CoupleSelected => coupleSelected;
 
     private void Awake()
     {

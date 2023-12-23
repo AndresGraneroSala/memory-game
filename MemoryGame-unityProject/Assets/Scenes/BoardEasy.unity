@@ -238,7 +238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.100006, y: -11.5}
+  m_AnchoredPosition: {x: -7.0999756, y: -11.5}
   m_SizeDelta: {x: 148.0602, y: 142.8614}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &520460514
@@ -924,7 +924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.100006, y: -166.45576}
+  m_AnchoredPosition: {x: -7.0999756, y: -166.45575}
   m_SizeDelta: {x: 148.0602, y: 146.5988}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1840394385
@@ -1164,20 +1164,20 @@ MonoBehaviour:
     sp2: {fileID: 1269012346, guid: a59ccb7afaff070469254d92c37cf41a, type: 3}
     card1: {fileID: 0}
     card2: {fileID: 0}
-  - sp1: {fileID: -456409929, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
-    sp2: {fileID: -283408072, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
+  - sp1: {fileID: -1817367019, guid: 0fd9a79f7d89d654fb6b980280152cc8, type: 3}
+    sp2: {fileID: -1511946265, guid: 0fd9a79f7d89d654fb6b980280152cc8, type: 3}
     card1: {fileID: 0}
     card2: {fileID: 0}
-  - sp1: {fileID: -456409929, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
-    sp2: {fileID: -283408072, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
+  - sp1: {fileID: 1532495423, guid: aa5f598bfa0d73f40848f6754303771d, type: 3}
+    sp2: {fileID: 1150822623, guid: aa5f598bfa0d73f40848f6754303771d, type: 3}
     card1: {fileID: 0}
     card2: {fileID: 0}
-  - sp1: {fileID: -456409929, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
-    sp2: {fileID: -283408072, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
+  - sp1: {fileID: -1616105179, guid: 7807a2d49181775419febf5a1339a9bd, type: 3}
+    sp2: {fileID: 104717604, guid: 7807a2d49181775419febf5a1339a9bd, type: 3}
     card1: {fileID: 0}
     card2: {fileID: 0}
-  - sp1: {fileID: -456409929, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
-    sp2: {fileID: -283408072, guid: 161d14c7f9ad0f44dad0ef2efd841bce, type: 3}
+  - sp1: {fileID: -2095624250, guid: f378050b8ea878742b9d7635eb6a0601, type: 3}
+    sp2: {fileID: 1608259576, guid: f378050b8ea878742b9d7635eb6a0601, type: 3}
     card1: {fileID: 0}
     card2: {fileID: 0}
   coupleSelected: -1
