@@ -1203,6 +1203,7 @@ MonoBehaviour:
   timeSeeCards: 5
   timeToFindCouples: 60
   points: 0
+  gridLayoutGroup: {fileID: 1250328430}
 --- !u!4 &1914130889
 Transform:
   m_ObjectHideFlags: 0

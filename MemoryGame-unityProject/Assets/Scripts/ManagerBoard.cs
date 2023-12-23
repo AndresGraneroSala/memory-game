@@ -28,8 +28,9 @@ public class ManagerBoard : MonoBehaviour
     [SerializeField] private float timeToFindCouples = 60;
 
     [SerializeField] private int points=0;
-    
 
+    [SerializeField] private GridLayoutGroup gridLayoutGroup;
+    
     private void Awake()
     {
         if (SharedInstance != null)
@@ -44,12 +45,25 @@ public class ManagerBoard : MonoBehaviour
     {
         timer = 5;
         InitBoard();
+        
+        UpdateCoverSize();
+        
         foreach (var card in cardsTransforms)
         {
             card.Find("Cover").gameObject.SetActive(false);
         }
 
         StartCoroutine(TimerSeeCards());
+    }
+
+
+    void UpdateCoverSize()
+    {
+        foreach (var card in cardsTransforms)
+        {
+            //TODO: asdsa
+            card.Find("Cover").gameObject.GetComponent<RectTransform>().sizeDelta = gridLayoutGroup.cellSize;
+        }
     }
 
     private IEnumerator TimerSeeCards()
