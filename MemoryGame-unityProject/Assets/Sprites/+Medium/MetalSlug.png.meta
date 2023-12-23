@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 161d14c7f9ad0f44dad0ef2efd841bce
+guid: 14aeb26abe0ee8347b5e33c7484f873d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kibys_0
+      name: MetalSlug_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 17
-        height: 17
+        x: 28
+        y: 19
+        width: 76
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59667ab3dfe6f0e4ab66ff4393292063
-      internalID: -456409929
+      spriteID: 802f3eec581331347bd5e40294c9d498
+      internalID: 33650543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kibys_1
+      name: MetalSlug_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 5
-        width: 16
-        height: 16
+        x: 151
+        y: 20
+        width: 72
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0731ddac95325a489c466deb1997c53
-      internalID: -283408072
+      spriteID: eb952d10c1653fa44a8066381691215a
+      internalID: -5828161
       vertices: []
       indices: 
       edges: []
@@ -201,8 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kibys_0: -456409929
-      kibys_1: -283408072
+      MetalSlug_0: 33650543
+      MetalSlug_1: -5828161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

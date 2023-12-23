@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 161d14c7f9ad0f44dad0ef2efd841bce
+guid: da05319454c9d4f4f89c28e4c6e98f43
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kibys_0
+      name: Tetris_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 17
-        height: 17
+        x: 0
+        y: 46
+        width: 82
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59667ab3dfe6f0e4ab66ff4393292063
-      internalID: -456409929
+      spriteID: 630839cd07256724abda469238bb2a89
+      internalID: -58158369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kibys_1
+      name: Tetris_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 5
-        width: 16
-        height: 16
+        x: 218
+        y: 46
+        width: 82
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0731ddac95325a489c466deb1997c53
-      internalID: -283408072
+      spriteID: 8df9c5b293d8edc4b8659603d778ec2d
+      internalID: 670070643
       vertices: []
       indices: 
       edges: []
@@ -201,8 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kibys_0: -456409929
-      kibys_1: -283408072
+      Tetris_0: -58158369
+      Tetris_1: 670070643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

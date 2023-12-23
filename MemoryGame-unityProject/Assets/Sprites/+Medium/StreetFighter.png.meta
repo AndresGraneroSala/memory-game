@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 161d14c7f9ad0f44dad0ef2efd841bce
+guid: f5477661943a7e94ab0d309bdad0580c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kibys_0
+      name: StreetFighter_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 17
-        height: 17
+        x: 10
+        y: 117
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59667ab3dfe6f0e4ab66ff4393292063
-      internalID: -456409929
+      spriteID: 9e5079c37ab3f574f8b75113f430282d
+      internalID: -912156722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kibys_1
+      name: StreetFighter_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 5
-        width: 16
-        height: 16
+        x: 10
+        y: 4
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0731ddac95325a489c466deb1997c53
-      internalID: -283408072
+      spriteID: 6cccf2252148f6f499be2afc928b5e40
+      internalID: 400957656
       vertices: []
       indices: 
       edges: []
@@ -201,8 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kibys_0: -456409929
-      kibys_1: -283408072
+      StreetFighter_0: -912156722
+      StreetFighter_1: 400957656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
