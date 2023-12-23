@@ -61,7 +61,6 @@ public class ManagerBoard : MonoBehaviour
     {
         foreach (var card in cardsTransforms)
         {
-            //TODO: asdsa
             card.Find("Cover").gameObject.GetComponent<RectTransform>().sizeDelta = gridLayoutGroup.cellSize;
         }
     }
@@ -91,6 +90,11 @@ public class ManagerBoard : MonoBehaviour
         
         while (timer>0)
         {
+            if (points*2 == numTotalCards)
+            {
+                yield break;
+            }
+            
             yield return new WaitForSeconds(1);
             timer--;
             timerText.text = timer.ToString("0");
