@@ -51,6 +51,7 @@ public class ManagerBoard : MonoBehaviour
         
         UpdateCoverSize();
         
+        //disable cards click
         foreach (var card in cardsTransforms)
         {
             card.Find("Cover").gameObject.SetActive(false);
@@ -80,6 +81,7 @@ public class ManagerBoard : MonoBehaviour
             timerText.text = timer.ToString("0");
         }
         
+        //enable cards click
         foreach (var card in cardsTransforms)
         {
             card.Find("Cover").gameObject.SetActive(true);
@@ -102,7 +104,7 @@ public class ManagerBoard : MonoBehaviour
             
             yield return new WaitForSeconds(1);
             timer--;
-            timerText.text = timer.ToString("0");
+            timerText.text = timer.ToString("00");
         }
         
         Finish();
@@ -136,7 +138,7 @@ public class ManagerBoard : MonoBehaviour
             else
             {
                 //print("loose");
-                CoupleLoose(id);
+                CoupleLoose();
 
             }
 
@@ -150,7 +152,7 @@ public class ManagerBoard : MonoBehaviour
         }
     }
 
-    void CoupleLoose(int id)
+    void CoupleLoose()
     {
 
         
@@ -162,8 +164,6 @@ public class ManagerBoard : MonoBehaviour
         selected1 = null;
         selected2 = null;
 
-        //couplesCards[coupleSelected].card1.gameObject.GetComponent<Image>().color= Color.white;
-        //couplesCards[coupleSelected].card2.gameObject.GetComponent<Image>().color= Color.white;
 
 
     }
@@ -174,11 +174,7 @@ public class ManagerBoard : MonoBehaviour
         disabled.a = 0.5f;
 
         couplesCards[id].card1.color = disabled;
-        //couplesCards[id].card1.gameObject.GetComponent<EventTrigger>().enabled=false;
-        
-        
         couplesCards[id].card2.color = disabled;
-       // couplesCards[id].card2.gameObject.GetComponent<EventTrigger>().enabled=false;
 
         
         
