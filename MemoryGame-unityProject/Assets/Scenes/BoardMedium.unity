@@ -596,8 +596,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 21.231, y: 0}
+  m_SizeDelta: {x: -352.78, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250328430
 MonoBehaviour:
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_StartAxis: 1
   m_CellSize: {x: 60, y: 60}
   m_Spacing: {x: 10, y: 10}
-  m_Constraint: 0
+  m_Constraint: 1
   m_ConstraintCount: 4
 --- !u!1 &1285303821
 GameObject:
@@ -1204,6 +1204,8 @@ MonoBehaviour:
   timeToFindCouples: 60
   points: 0
   gridLayoutGroup: {fileID: 1250328430}
+  selected1: {fileID: 0}
+  selected2: {fileID: 0}
 --- !u!4 &1914130889
 Transform:
   m_ObjectHideFlags: 0
